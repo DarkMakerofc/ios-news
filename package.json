@@ -1,6 +1,6 @@
 {
   "name": "ios-news",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Simple Ios News Scraper By Mr Nima",
   "main": "index.js",
   "scripts": {
