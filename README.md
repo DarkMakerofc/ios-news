@@ -33,6 +33,7 @@ or
 <a name= "allnews">
 
 ```
+
 data.all()
   .then((result) => {
     console.log(result);
@@ -192,7 +193,6 @@ data.all()
 <a name= "latest">
 
 ```
-
 data.latest()
   .then((result) => {
     console.log(result);
@@ -228,7 +228,6 @@ data.latest()
 <a name= "fromlink">
 
 ```
-
 data.fromlink("https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pro/")
   .then((result) => {
     console.log(result);
@@ -236,7 +235,6 @@ data.fromlink("https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pr
   .catch((error) => {
     console.log(error);
   });
-
 ```
 
 #### ✅ Latest News Result
@@ -258,3 +256,5 @@ data.fromlink("https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pr
 </a>
 
 # Author : [@mrnima](https://github.com/darkmakerofc)
+
+All news rights belong to [macrumors.com](https://macrumors.com) site
