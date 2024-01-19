@@ -1,154 +1,260 @@
-## <u> IOS NEWS SCRAPER <u> 
-🍎 The UnOfficial ios News Scraper By [Mr Nima](https://github.com/DarkMakerofc). <br>
-#### ✅ How To Use
-```
-const { iosNews } = require('ios-news')
-const result = await iosNews()
+<h2 align="center"> IOS NEWS </h2>
 
-console.log(result)
-```
-<br> 
-You Can Get Apple News Updates Using This. 
+<h4 align="center">
+
+🍎 The UnOfficial ios News Scraper By [Mr Nima](https://github.com/DarkMakerofc). <br>
+
+ </h4>
+ 
+ [ Using This Npm Package ]
+* [Get All News](#allnews)
+* [Get News Using Link](#latest)
+* [Get Latest News](#fromlink)
+
 
 <br>
 
-#### 🔍 Result 
+#### ⬇️ Install Package 
+     npm install ios-news
+or 
+
+     yarn add ios-news
+
+<br>
+
+#### ➡️ Require Package 
+     const { IOSNEWS } = require('ios-news')
+
+#### ▶️ Start Package 
+     const data = await IOSNEWS()
+     
+     
+#### 📝 Get All News List 
+<a name= "allnews">
+
+```
+data.all()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+  
+```
+
+#### ✅ All News Result 
 
 ```
 {
-  creator: 'MR NIMA',
-  status: true,
-  result: [
-    {
-      title: 'Top Stories: visionOS SDK, iOS 17 Beta 2, and More',
-      time: 'Saturday June 24 |  2023 6:00 am PDT',
-      img: 'https://images.macrumors.com/t/vN6lkL6_8txA8C3lTew1EU5oJxM=/400x0/article-new/2023/06/top-stories-24jun2023.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/',
-      desc: "It's been two weeks since WWDC wrapped up, and this week saw Apple release the second round of betas of its upcoming operating system updates introduced at the conference, plus the initial release of developer tools and a simulator needed to allow developers to build apps for the Vision Pro headset."
-    },
-    {
-      title: 'HyperPack Pro Tech Backpack With Find My Integration Now Available',
-      time: 'Friday June 23 |  2023 1:05 pm PDT',
-      img: 'https://images.macrumors.com/t/lqif3K36N3hd4kf_J6V4ycKvXSI=/400x0/article-new/2022/12/hyperpack-pro-feature.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/23/hyperpack-backpack-find-my/',
-      desc: 'Popular accessory maker Hyper this week announced the launch of its HyperPack Pro backpack, which has built-in Find My functionality. Hyper has been working on the backpack since last year, launching it via a crowdfunding campaign on Indiegogo, but it now has wide availability from the Hyper website.'
-    },
-    {
-      title: "LG Offering Two Free Months of Apple's MLS Season Pass",
-      time: 'Friday June 23 |  2023 10:37 am PDT',
-      img: 'https://images.macrumors.com/t/Iyv_8A5UBVhibaA0jLabEJCu3OE=/400x0/article-new/2023/06/lg-mls-trial.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/23/lg-mls-season-pass-deal/',
-      desc: 'LG today announced that LG Smart TV owners in the United States can sign up for two free months of Major League Soccer Season Pass using the Apple TV app, allowing access to every live Major League Soccer match, including Leagues Cup, All-Star games, and playoffs.'
-    },
-    {
-      title: 'Best Apple Deals of the Week: 10.2-Inch iPad Hits All-Time Low Price of $249.99 Amid Sales on Apple Watch and MacBook Pro',
-      time: 'Friday June 23 |  2023 10:12 am PDT',
-      img: 'https://images.macrumors.com/t/uQQoYVQJJT_A9MAU9Gv77ThOXXo=/400x0/article-new/2022/06/Hero0001.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/23/best-apple-deals-of-the-week-6-23-23/',
-      desc: "This week we got news about Amazon's upcoming Prime Day 2023 sale and tracked a few deals on Apple products including the 10.2-inch iPad, M2 MacBook Pro, and Apple Watch Series 8. We also have an exclusive promo code running at Satechi through the end of the weekend. "
-    },
-    {
-      title: 'The MacRumors Show: Two Weeks Using watchOS 10, iOS 17, and macOS Sonoma',
-      time: 'Friday June 23 |  2023 9:20 am PDT',
-      img: 'naN',
-      link: 'https://www.macrumors.com/2023/06/23/the-macrumors-show-ios-17-macos-sonoma-betas/',
-      desc: "After spending two weeks using the beta versions of watchOS 10, iOS 17, iPadOS 17, macOS Sonoma, and tvOS 17, we discuss our experiences and highlight our favorite new features from each of the updates on this week's episode of The MacRumors Show.‌iOS 17‌ introduces features like StandBy mode, Contact Posters, and Live Voicemail, while ‌iPadOS 17‌ makes some meaningful enhancements to Stage Manager, introduces external camera support, and brings over Lock Screen customization, Live Activities, and the Health app from the iPhone.‌macOS Sonoma‌ adds an integrated video screen saver and wallpaper experience, desktop widgets, Safari web apps, and Game Mode. tvOS 17 is a modest update that redesigns the Control Center and introduces FaceTime via Continuity Camera.A large number of new features, like interactive widgets, improved autocorrect, the Messages redesign, offline maps, authentication code autofill, Apple Music crossfade, Note links, support for multiple timers, video call reactions and presenter overlays, and improved PDF support, come to several of Apple's updated operating systems.Listen to The MacRumors Show in Apple Podcasts, Spotify, Overcast, Pocket Casts, Castro, Google Podcasts, or your preferred podcasts app. You can also copy our RSS feed directly into your podcast player. Watch a video version of the show on the MacRumors YouTube channel.Subscribe to ‌The MacRumors Show‌ for more episodes, where we discuss some of the topical news breaking here on MacRumors, often joined by exciting guests like Andru Edwards, Kevin Nether, Arnold Kim, Ben Sullins, Mark Gurman, Marcus Kane, Christopher Lawley, Frank McShan, David Lewis, Tyler Stalman, Jon Prosser, Sam Kohl, Quinn Nelson, John Gruber, Federico Viticci, Sara Dietschy, Luke Miani, Thomas Frank, Jonathan Morrison, iJustine, Ross Young, Ian Zelbo, Jon Rettinger, and Rene Ritchie. You can also head over to The MacRumors Show forum thread to engage with us directly. Remember to rate and review the show, and let us know what subjects you would like the podcast to cover in the future."
-    },
-    {
-      title: 'Apple Reportedly Planning to Switch Technology Behind A17 Bionic Chip to Cut Costs Next Year',
-      time: 'Friday June 23 |  2023 7:27 am PDT',
-      img: 'https://images.macrumors.com/t/BiHMvqQvo_J7IN1du_3rAwnXV4Y=/400x0/article-new/2023/06/A17-Feature-Dark.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/23/apple-to-switch-tech-behind-a17-to-cut-costs/',
-      desc: 'The A17 Bionic chip initially used in the iPhone 15 Pro and ‌iPhone 15 Pro‌ Max later this year will fundamentally differ from a version of the same chip set to be manufactured in 2024, a new rumor claims.'
-    },
-    {
-      title: "Here's How Interactive Widgets Work in macOS Sonoma",
-      time: 'Friday June 23 |  2023 3:38 am PDT',
-      img: 'https://images.macrumors.com/t/p4vx_bzr1H9LNIrfy3P-CRRj9b0=/400x0/article-new/2023/04/Widgets-on-Your-Mac-Thumb-3.jpg?lossy',
-      link: 'https://www.macrumors.com/guide/how-widgets-work-macos-sonoma/',
-      desc: "In macOS Sonoma, Apple has changed the widgets landscape. No longer do widgets have to be hidden offscreen and largely forgotten in the Notifications Center panel. Now they live right on your desktop – and they're interactive, too."
-    },
-    {
-      title: 'Apple Reportedly in Discussions With Banks to Launch Apple Card in India',
-      time: 'Friday June 23 |  2023 3:04 am PDT',
-      img: 'https://images.macrumors.com/t/Wo8aSfwZPT12DsGvZbW_c_WLyF8=/400x0/article-new/2023/06/Apple-Card-Balance.jpeg?lossy',
-      link: 'https://www.macrumors.com/2023/06/23/apple-seeks-apple-card-launch-india/',
-      desc: 'Apple is in talks with banks to launch Apple Card in India, claims a report by local finance website Moneycontrol. '
-    },
-    {
-      title: 'LG to Bring AirPlay to Hotel Room TVs Later This Year',
-      time: 'Thursday June 22 |  2023 4:31 pm PDT',
-      img: 'https://images.macrumors.com/t/g8_OtdTt_9g4tapRYLwBhOegWLI=/400x0/article-new/2023/06/airplay-hotels.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/22/lg-airplay-hotel-room-tvs/',
-      desc: "LG Electronics will be one of the first TV manufacturers to support Apple's AirPlay expansion, which will see Apple bringing easy access ‌AirPlay‌ to hotel room TVs."
-    },
-    {
-      title: 'Video: A First Look at visionOS for the Apple Vision Pro',
-      time: 'Thursday June 22 |  2023 10:42 am PDT',
-      img: 'naN',
-      link: 'https://www.macrumors.com/2023/06/22/visionos-hands-on/',
-      desc: `Apple yesterday released the first ever beta of visionOS and the SDK that will allow developers to create apps for the Apple Vision Pro headset. visionOS can only be explored through Xcode right now, but we thought we'd take a hands-on look to see what we can glean about the headset experience from the operating system.You can only see the operating system on the screen of your Mac, so it's not what the headset will really be like, and you can't experience the same level of immersion. That said, you can see what ‌visionOS‌ will look like, including the Home View and app windows, plus you can see how 2D iPad and iPhone apps will look.Webpages can be loaded into a ‌visionOS‌ version of Safari so website developers can see what their webpages will look like and what needs to be tweaked. Everything looks a lot like iOS, but if iOS were in your living room or kitchen.There's a Control Center with customizable options for things like light and dark mode, and there's a Guest Mode, which is how you'll be able to let curious people try out the headset without access to your sensitive data. Spotlight is available for searches, and you can set up a range of "Environments" that block out the world around you.From the ‌visionOS‌ Xcode experience and ‌visionOS‌ code we know there are over a dozen Environments you can select, such as Joshua Tree, Yosemite, Mount Hood, and even the moon. There's a Visual Search feature that will be able to identify items around you, copy printed text from the real world, translate languages in real time, and more, plus Apple has designed a Travel Mode that can be activated when you're on an airplane.Travel Mode ensures that you're stationary while you're wearing the Vision Pro, and it blocks out distractions around you. Certain sensors are turned off, perhaps for the privacy of other passengers or because close proximity to a number of other people can cause the sensors to malfunction.Apple will provide Vision Pro testing labs to developers in several locations worldwide starting next month, plus the company is going to open up applications for a hardware-based Vision Pro developer kit that will allow developers to test their apps right on the Vision Pro itself.Make sure to watch our full video to get a closer look at the early stages of ‌visionOS‌.`
-    },
-    {
-      title: 'Latest iOS 17 Beta Makes Haptic Touch Faster',
-      time: 'Thursday June 22 |  2023 9:52 am PDT',
-      img: 'https://images.macrumors.com/t/LMqmshPGGuq8MGnTuTrQM7e_uDE=/400x0/article-new/2023/06/haptic-touch-ios-17-fast.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/22/ios-17-haptic-touch-faster/',
-      desc: 'The second beta of iOS 17 that Apple released to developers yesterday includes a setting that makes the haptic feedback feature activate faster than before, which some users may prefer.'
-    },
-    {
-      title: "Apple Vision Pro to Feature 'Travel Mode' for Better In-Flight Experience",
-      time: 'Thursday June 22 |  2023 9:10 am PDT',
-      img: 'https://images.macrumors.com/t/EZ7NZyKdMADPUJ41f72JXA5-8C0=/400x0/article-new/2023/06/apple-vision-pro-airplane.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/22/apple-vision-pro-travel-mode/',
-      desc: 'Apple has an intriguing hidden feature for its Apple Vision Pro spatial computer in the first developer beta of visionOS. The feature, termed "Travel Mode," is specifically aimed at enhancing the user experience while on board an airplane.'
-    },
-    {
-      title: 'Deals: Apple Watch Series 8 Models Drop to Best-Ever Prices on Amazon, Starting at $329',
-      time: 'Thursday June 22 |  2023 7:51 am PDT',
-      img: 'https://images.macrumors.com/t/5771NA4FQ_0y1hxcm7zfPt0oG2U=/400x0/article-new/2023/06/series-8.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/22/deals-apple-watch-series-8-amazon/',
-      desc: 'Amazon today has a few deals on the Apple Watch Series 8, including all-time low prices on both 41mm and 45mm GPS models. All of the watches mentioned below are in stock and ready to ship, with delivery dates around June 24 in most cases.'
-    },
-    {
-      title: "Apple Vision Pro 'Visual Search' Feature Can Identify Items, Copy Printed Text, Translate and More",
-      time: 'Wednesday June 21 |  2023 5:39 pm PDT',
-      img: 'https://images.macrumors.com/t/vSE1u3hvNu7GljTpULoIhbYQd_U=/400x0/article-new/2023/06/vision-pro-headset-1.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/21/vision-pro-visual-search-feature/',
-      desc: `The Apple Vision Pro headset's visionOS operating system includes a feature called "Visual Search," which sounds like it is similar to the Visual Lookup feature on the iPhone and the iPad.`
-    },
-    {
-      title: "Here Are All the 'Environments' You Can Experience in visionOS",
-      time: 'Wednesday June 21 |  2023 4:00 pm PDT',
-      img: 'https://images.macrumors.com/t/4kBysEnG1JthJKbqoub3P4x9u6E=/400x0/article-new/2023/06/vision-pro-environments.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/21/visionos-environments/',
-      desc: 'With the Vision Pro headset, there is an option to activate an Environment that allows you to shut out the world around you. While Apple has mentioned Mount Hood as an Environment you can visit and use as a backdrop, there are several others.'
-    },
-    {
-      title: 'Everything New in iOS 17 Beta 2',
-      time: 'Wednesday June 21 |  2023 3:16 pm PDT',
-      img: 'https://images.macrumors.com/t/DYgTbekf1q7MbWVjJvQU-HP48oo=/400x0/article-new/2023/06/General-iOS-17-Feature-Blue-Green.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/21/everything-new-in-ios-17-beta-2/',
-      desc: "Apple today released the second beta of upcoming iOS 17 and iPadOS 17 updates to developers for testing purposes, and like all new betas for a major point update, the software includes a number of small tweaks and changes as Apple refines the operating systems ahead of launch. We've aggregated everything new that we've found in the second beta so far. "
-    },
-    {
-      title: 'Apple Releases Second Studio Display 17 Firmware Beta',
-      time: 'Wednesday June 21 |  2023 2:30 pm PDT',
-      img: 'https://images.macrumors.com/t/7_ElUchup9rSyqAyn-MJoME4jF0=/400x0/article-new/2022/03/apple-studio-display-blue.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/21/apple-studio-display-17-firmware-beta-2/',
-      desc: 'Apple today released a second Studio Display 17 firmware beta, with the update coming two weeks after the release of the first beta.'
-    },
-    {
-      title: 'Apple Releases First Ever visionOS Beta',
-      time: 'Wednesday June 21 |  2023 1:48 pm PDT',
-      img: 'https://images.macrumors.com/t/0vVmKZANO7EIaoIfc_CpDGvNkBg=/400x0/article-new/2023/06/visionos-home-screen-mt-hood.jpg?lossy',
-      link: 'https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/',
-      desc: 'Apple today introduced the first version of the visionOS software, debuting the ‌visionOS‌ 1.0 Developer Beta. The introduction of the beta comes as Apple has announced the launch of the ‌visionOS‌ software development kit (SDK) that will allow third-party developers to build apps for the Vision Pro headset.'
-    }
-  ]
+   "creator": "MR NIMA",
+   "status": true,
+   "result": [
+      {
+         "title": "Apple Says Vision Pro Does Not Support Hard Contact Lenses",
+         "time": "Friday January 19 |  2024 5:33 am PST",
+         "img": "https://images.macrumors.com/t/h4pQvRvdnJBhyQ0GF55pSD-oRVc=/400x0/article-new/2023/11/apple-vision-pro-eye.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/apple-says-vision-pro-no-hard-contact-lenses/",
+         "desc": "Apple Vision Pro should not be used while wearing hard contact lenses, Apple says in its pre-order process for its new spatial computing headset."
+      },
+      {
+         "title": "Apple Releases Vision Pro Accessories, Including $199 Travel Case",
+         "time": "Friday January 19 |  2024 5:22 am PST",
+         "img": "https://images.macrumors.com/t/N3x_KQSwAml8LIA7Yidrvhs04rw=/400x0/article-new/2024/01/vision-pro-case-feature.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/apple-releases-vision-pro-accessories/",
+         "desc": "Apple today added a range of Vision Pro accessories to its online store in the U.S., including a $199 travel case for the headset."
+      },
+      {
+         "title": "Maxed-Out Apple Vision Pro Headset Costs Almost $4,800",
+         "time": "Friday January 19 |  2024 5:18 am PST",
+         "img": "https://images.macrumors.com/t/aX3bXxaRdduItY7J1kIZz-OQdZI=/400x0/article-new/2023/06/vision-pro-headset.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/maxed-out-apple-vision-pro-headset/",
+         "desc": "A top-specification Vision Pro headset with all optional extras costs $4,795.95, which is $1,296.95 more than the device's $3,499 starting price. "
+      },
+      {
+         "title": "AppleCare+ for Vision Pro Headset Costs $499",
+         "time": "Friday January 19 |  2024 5:03 am PST",
+         "img": "https://images.macrumors.com/t/OIT90QcvAZ_KDbvRk6HFPt4tomI=/400x0/article-new/2021/12/applecare-apple-care-banner.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pro/",
+         "desc": "Today's Apple Vision Pro pre-order process unveiled that AppleCare+ for the headset is priced at $499."
+      },
+      {
+         "title": "Apple Vision Pro Available With These Three Storage Options",
+         "time": "Friday January 19 |  2024 5:02 am PST",
+         "img": "https://images.macrumors.com/t/MqYkBbb0n-BJJnmeY3mo17FP2jQ=/400x0/article-new/2016/02/apple-vision-pro.jpeg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/vision-pro-available-with-these-storage-options/",
+         "desc": "Apple's Vision Pro headset is available with three different storage options, today's pre-order process has revealed."
+      },
+      {
+         "title": "Apple Shares Vision Pro Specs: Up to 1TB Storage, M2 Chip With 8-Core CPU, 16GB RAM, and More",
+         "time": "Friday January 19 |  2024 5:02 am PST",
+         "img": "https://images.macrumors.com/t/bbRKhoqe7LYQl60tpdRFEhPUw54=/400x0/article-new/2023/06/apple-vision-pro-chips.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/apple-vision-pro-tech-specs/",
+         "desc": "Apple today finally shared additional tech specs for its Vision Pro headset following the start of pre-orders in the United States."
+      },
+      {
+         "title": "Apple Vision Pro Now Available for Pre-Order",
+         "time": "Friday January 19 |  2024 5:01 am PST",
+         "img": "https://images.macrumors.com/t/j6Eupmg9G5IbsN3KDgJM-BVgg5s=/400x0/article-new/2024/01/Vision-Pro-Pre-Orders-Feature-1.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/apple-vision-pro-now-available-for-pre-order/",
+         "desc": "Apple is now accepting pre-orders for the Apple Vision Pro, the company's first spatial computing device. Orders are live in the U.S. online store, with the Vision Pro limited to the United States for the time being."
+      },
+      {
+         "title": "iPhone 16 Pro Models to Come With 2TB Storage Option, Claims Rumor",
+         "time": "Friday January 19 |  2024 3:06 am PST",
+         "img": "https://images.macrumors.com/t/vkKQSE-JHf57kyxrnCGDw8CmtLI=/400x0/article-new/2024/01/iPhone-16-Pro-Right-Side-Feature.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/iphone-16-pro-2tb-option-rumor/",
+         "desc": "This year's forthcoming iPhone 16 Pro models will be available with a new 2TB maximum storage option, claims a new rumor coming out of Korea."
+      },
+      {
+         "title": "Apple Store Down Ahead of Vision Pro Headset Pre-Orders",
+         "time": "Friday January 19 |  2024 2:11 am PST",
+         "img": "https://images.macrumors.com/t/ClVzXHLFYRHXXtHjgi_xf3yYFeg=/400x0/article-new/2024/01/apple-store-down-vision-pro.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/apple-store-down-vision-pro-pre-orders/",
+         "desc": "Apple's online store is down in the U.S. ahead of Vision Pro pre-orders, which are scheduled to open at 5:00 a.m. Pacific Time, ahead of the device's official launch on Friday, February 2. "
+      },
+      {
+         "title": "UK 'Body Coach' Joe Wicks to Make Guest Appearance on Apple Fitness+",
+         "time": "Friday January 19 |  2024 1:32 am PST",
+         "img": "https://images.macrumors.com/t/cFnhBsXdqiYjHCDNRJbGsuWM_9w=/400x0/article-new/2024/01/Apple-Fitness-Plus-UK-Joe-Wicks.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/19/joe-wicks-guest-appearance-apple-fitness/",
+         "desc": "Apple has announced that British fitness coach Joe Wicks MBE, also known as \"The Body Coach,\" is set to make a guest appearance in Apple Fitness+ to \"help users kick-start their fitness routine\" this new year."
+      },
+      {
+         "title": "iPhone 16 Capture Button Will Respond to Touch and Pressure for Zooming and Focusing",
+         "time": "Thursday January 18 |  2024 5:09 pm PST",
+         "img": "https://images.macrumors.com/t/wpp-f8jJT-4oBBgx-_YG81g4USM=/400x0/article-new/2023/11/iPhone-16-Pro-Mock-Header-Updated.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/iphone-16-capture-button-touch-pressure/",
+         "desc": "Apple is planning to add a new \"Capture Button\" to the iPhone 16 models, as we first reported back in September. When the news broke about the extra button, we didn't initially know what it was for, but the name gave us some hints and Bloomberg's Mark Gurman confirmed in December that it would be used for taking video."
+      },
+      {
+         "title": "Apple Giving Employees 25% Discount on Vision Pro",
+         "time": "Thursday January 18 |  2024 4:33 pm PST",
+         "img": "https://images.macrumors.com/t/qAYIv7yaK9hACD5AtWyfxSrTMPg=/400x0/article-new/2024/01/Apple-Vision-Pro-Dual-Loop-Band-Purple-Feature.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/apple-vision-pro-employee-discount/",
+         "desc": "Apple employees will be able to purchase the Vision Pro at a 25 percent discount, which drops the price of the device $3,500 to approximately $2624, not including tax."
+      },
+      {
+         "title": "Apple Says Vision Pro Could Be Used for Surgeries, Technical Training and More",
+         "time": "Thursday January 18 |  2024 4:05 pm PST",
+         "img": "https://images.macrumors.com/t/mFfcF0PvWgHBx2bgEPVXyG94mb8=/400x0/article-new/2024/01/vision-pro-macbook.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/vision-pro-enterprise-uses/",
+         "desc": "Apple executives believe the Vision Pro has a number of enterprise applications, from advanced technical training to use in operating rooms, according to a video sent out to employees."
+      },
+      {
+         "title": "Pre-Ordering Apple Vision Pro: What You Need to Know",
+         "time": "Thursday January 18 |  2024 3:01 pm PST",
+         "img": "https://images.macrumors.com/t/vSE1u3hvNu7GljTpULoIhbYQd_U=/400x0/article-new/2023/06/vision-pro-headset-1.jpg?lossy",
+         "link": "https://www.macrumors.com/how-to/apple-vision-pro-pre-order-need-to-know/",
+         "desc": "Apple has announced that its Vision Pro headset will officially launch in the United States on February 2, and that pre-orders will be open starting Friday, January 19, at 5:00 a.m. Pacific Time. Here's everything you need to know about pre-ordering your unit on Apple's online store."
+      },
+      {
+         "title": "YouTube and Spotify Apps Won't Be Available on Vision Pro",
+         "time": "Thursday January 18 |  2024 2:42 pm PST",
+         "img": "https://images.macrumors.com/t/AiRCQZCscQbZRG2kXAhwM8feU_Q=/400x0/article-new/2023/06/Apple-Vision-Pro-with-battery-Feature-Blue-Magenta.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/youtube-spotify-vision-pro/",
+         "desc": "YouTube and Spotify do not plan to offer apps on the Vision Pro headset, according to a new report from Bloomberg. YouTube said that it is not developing a YouTube Vision Pro app, nor will it allow the YouTube iPad app to run on the device."
+      },
+      {
+         "title": "Super Fruit Ninja on Vision Pro Lets Gamers Chop Fruit With Hand Gestures",
+         "time": "Thursday January 18 |  2024 12:50 pm PST",
+         "img": "https://images.macrumors.com/t/ZEbIeVP0TuAmSVoiImmPFN6xFXw=/400x0/article-new/2024/01/fruit-ninja-vision-pro-1.jpeg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/super-fruit-ninja-vision-pro/",
+         "desc": "Fruit Ninja from Halfbrick Studios was developed for the iPhone in 2010, and since then, it's been one of the best-known mobile games. The Apple Arcade version is set to come to the Vision Pro, and Halfbrick today shared details on how it was customized for Apple's spatial computer."
+      },
+      {
+         "title": "Masimo CEO: Apple Watch Blood Oxygen Sensor is Not Reliable, Customers Are 'Better Off Without It'",
+         "time": "Thursday January 18 |  2024 12:04 pm PST",
+         "img": "https://images.macrumors.com/t/mbcDEBnskEFc5Li2isUCma3wZuE=/400x0/article-new/2023/05/apple-watch-ultra-yellow.jpg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/masimo-ceo-apple-blood-oxygen-sensor-unreliable/",
+         "desc": "As Apple starts selling Apple Watch Series 9 and Ultra 2 models without the blood oxygen sensor enabled, Masimo CEO Joe Kiani confirmed to Bloomberg that there has been no chat with Apple about a possible settlement."
+      },
+      {
+         "title": "Some Apple Stores Closing Early on Sunday Ahead of Vision Pro Launch",
+         "time": "Thursday January 18 |  2024 11:53 am PST",
+         "img": "https://images.macrumors.com/t/yczF0lu4XX1qQdYb561ieSMLaoU=/400x0/article-new/2023/06/Apple-Vision-Pro-at-Steve-Jobs-Theater.jpeg?lossy",
+         "link": "https://www.macrumors.com/2024/01/18/some-apple-stores-closing-early-sunday/",
+         "desc": "At least 70 of Apple's retail stores in the U.S. will be closing earlier than usual on Sunday, according to Apple's website. Most of Apple's other retail stores across the country already have reduced hours on Sundays."
+      }
+   ]
 }
+
+```
+</a>
+
+<br>
+
+<br>
+
+
+#### 📝 Fetch Latest News
+
+<a name= "latest">
+
 ```
 
-<br><br>
+data.latest()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
-All news rights belong to [macrumors.com](https://www.macrumors.com) site 
+```
+
+#### ✅ Latest News Result
+
+```
+{
+   "creator": "MR NIMA",
+   "status": true,
+   "result": {
+      "title": "AppleCare+ for Vision Pro Headset Costs $499",
+      "link": "https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pro/",
+      "images": [
+         "https://images.macrumors.com/t/OIT90QcvAZ_KDbvRk6HFPt4tomI=/400x0/article-new/2021/12/applecare-apple-care-banner.jpg?lossy"
+      ],
+      "desc": "Today's Apple Vision Pro pre-order process unveiled that AppleCare+ for the headset is priced at $499.\n‌AppleCare‌+ for the Vision Pro includes unlimited repairs for accidental damage protection, Apple-certified service and support, Express Replacement Service (the company will ship you a replacement so you don't have to wait for a repair), and 24/7 priority access to \"Apple experts.\"\nThe pricing of ‌AppleCare‌ for the Vision Pro was not clear until pre-orders opened earlier today. The Vision Pro launches in the U.S. on Friday, February 2.\nMore to follow...\n\nMacRumors attracts a broad audience of both consumers and professionals interested in the latest technologies and products. We also boast an active community focused on purchasing decisions and technical aspects of the iPhone, iPad, Mac, and other Apple platforms.\n"
+   }
+}
+```
+</a>
+<br>
+<br>
+
+#### 📝 Get News From Link
+
+<a name= "fromlink">
+
+```
+
+data.fromlink("https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pro/")
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+```
+
+#### ✅ Latest News Result
+
+```
+{
+   "creator": "MR NIMA",
+   "status": true,
+   "result": {
+      "title": "AppleCare+ for Vision Pro Headset Costs $499",
+      "link": "https://www.macrumors.com/2024/01/19/applecare-plus-for-vision-pro/",
+      "images": [
+         "https://images.macrumors.com/t/OIT90QcvAZ_KDbvRk6HFPt4tomI=/400x0/article-new/2021/12/applecare-apple-care-banner.jpg?lossy"
+      ],
+      "desc": "Today's Apple Vision Pro pre-order process unveiled that AppleCare+ for the headset is priced at $499.\n‌AppleCare‌+ for the Vision Pro includes unlimited repairs for accidental damage protection, Apple-certified service and support, Express Replacement Service (the company will ship you a replacement so you don't have to wait for a repair), and 24/7 priority access to \"Apple experts.\"\nThe pricing of ‌AppleCare‌ for the Vision Pro was not clear until pre-orders opened earlier today. The Vision Pro launches in the U.S. on Friday, February 2.\nMore to follow...\n\nMacRumors attracts a broad audience of both consumers and professionals interested in the latest technologies and products. We also boast an active community focused on purchasing decisions and technical aspects of the iPhone, iPad, Mac, and other Apple platforms.\n"
+   }
+}
+```
+</a>
+
+# Author : [@mrnima](https://github.com/darkmakerofc)
